@@ -1,148 +1,20 @@
 <!doctype html>
-<html lang="vi">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SEXVIP — Trang chủ</title>
-<meta name="description" content="SEXVIP - giao diện danh mục video, tìm kiếm và phân trang.">
-<style>
-:root{--bg:#171717;--panel:#222;--text:#f2f2f2;--muted:#c6c6c6;--pink:#ff2f68;--line:#303030}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}
-header{padding:12px 20px 0;background:#151515}
-.top{display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:1200px;margin:auto}
-.logo{font-size:clamp(30px,6vw,58px);font-weight:900;letter-spacing:1px;color:#f3213c;text-decoration:none}
-.logo span{color:#f4f4f4}
-.menu-btn{background:#242424;color:white;border:0;padding:14px 18px;font-size:25px;cursor:pointer}
-.search{display:flex;max-width:1200px;margin:52px auto 0;padding-bottom:24px}
-.search input{flex:1;min-width:0;background:#292929;border:0;color:white;padding:16px 18px;font-size:20px;outline:2px solid transparent}
-.search input:focus{outline-color:var(--pink)}
-.search button,.pink-btn{background:var(--pink);color:#fff;border:0;padding:0 24px;font-size:22px;cursor:pointer}
-.nav{max-width:1200px;margin:auto;display:none;flex-wrap:wrap;gap:9px;padding:0 0 18px}
-.nav.open{display:flex}
-.nav a,.tag{background:#292929;color:#eee;text-decoration:none;padding:10px 13px;font-weight:700;border:1px solid #383838}
-.nav a:hover,.nav a.active,.tag:hover{background:var(--pink);border-color:var(--pink)}
-main{max-width:1200px;margin:auto;padding:26px 20px 45px}
-.section-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:8px 0 24px;border-left:7px solid var(--pink);padding:12px 0 12px 22px}
-.section-head h1{font-size:clamp(23px,4vw,34px);font-weight:500;margin:0}
-.add-btn{width:54px;height:54px;font-size:28px;font-weight:bold}
-.categories{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 20px}
-.card{min-width:0;text-decoration:none;color:var(--text);display:block}
-.thumb{width:100%;aspect-ratio:1.48;display:flex;align-items:center;justify-content:center;text-align:center;padding:12px;background:linear-gradient(135deg,#383838,#181818 55%,#4b2330);border:1px solid #303030;color:#ddd;position:relative;overflow:hidden}
-.thumb:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,transparent 30%,rgba(255,47,104,.17),transparent 70%)}
-.thumb span{z-index:1;font-size:clamp(13px,2.3vw,18px);font-weight:bold}
-.views{position:absolute;left:9px;bottom:8px;background:#080808dd;padding:5px 9px;font-size:14px;z-index:2}
-.card h2{font-size:clamp(16px,2.5vw,22px);font-weight:400;line-height:1.5;text-align:center;margin:10px 4px 0}
-.card:hover h2{color:#ff789b}
-.empty{display:none;grid-column:1/-1;text-align:center;padding:40px;color:var(--muted)}
-.pagination{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:36px 0 12px}
-.pagination button{background:#303030;color:#eee;border:0;padding:10px 14px;font-size:16px;cursor:pointer}
-.pagination button.active,.pagination button:hover{background:var(--pink)}
-.description{background:#202020;padding:30px 24px;margin-top:35px;text-align:center;color:#ccc;font-size:18px;line-height:1.7}
-.description strong{color:#ff526f}
-.tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:20px}
-.tags a{background:#303030;color:#eee;text-decoration:none;padding:8px 10px}
-footer{border-top:1px solid #303030;background:#191919;text-align:center;padding:30px 20px;color:#bbb;line-height:1.8}
-footer a{color:#ff6b84;text-decoration:none}
-.to-top{position:fixed;right:18px;bottom:22px;width:52px;height:52px;background:var(--pink);border:0;color:white;font-size:24px;cursor:pointer;display:none}
-@media(min-width:850px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.nav{display:flex}.menu-btn{display:none}}
-@media(max-width:420px){header{padding-left:12px;padding-right:12px}.search{margin-top:32px}.search input{font-size:16px;padding:13px}.search button{padding:0 18px}main{padding-left:10px;padding-right:10px}.grid{gap:22px 10px}.card h2{font-size:15px}.section-head{padding-left:13px}}
-</style>
-</head>
-<body>
-<header id="top">
-  <div class="top">
-    <a class="logo" href="#" aria-label="SEXVIP trang chủ">SEXVIP<span>.COM</span></a>
-    <button class="menu-btn" id="menuBtn" aria-label="Mở danh mục">☰</button>
-  </div>
-  <form class="search" id="searchForm" role="search">
-    <input id="searchInput" type="search" placeholder="Tìm kiếm..." aria-label="Tìm kiếm video">
-    <button type="submit" aria-label="Tìm kiếm">⌕</button>
-  </form>
-  <nav class="nav" id="nav" aria-label="Danh mục chính">
-    <a href="#videos" data-category="Tất cả" class="active">Tất cả</a>
-    <a href="#videos" data-category="Việt Nam">Việt Nam</a>
-    <a href="#videos" data-category="Nhật Bản">Nhật Bản</a>
-    <a href="#videos" data-category="Hàn Quốc">Hàn Quốc</a>
-    <a href="#videos" data-category="Trung Quốc">Trung Quốc</a>
-    <a href="#videos" data-category="Châu Âu">Châu Âu</a>
-    <a href="#videos" data-category="Thái Lan">Thái Lan</a>
-    <a href="#videos" data-category="Gay">Gay</a>
-    <a href="#videos" data-category="Khác">Khác</a>
-  </nav>
-</header>
-<main id="videos">
-  <div class="section-head">
-    <h1 id="sectionTitle">Video mới nhất</h1>
-    <button class="pink-btn add-btn" id="showCategories" aria-label="Hiện danh mục">+</button>
-  </div>
-  <div class="categories" id="categoryPills">
-    <a class="tag active" href="#videos" data-category="Tất cả">Tất cả</a>
-    <a class="tag" href="#videos" data-category="Việt Nam">Việt Nam</a>
-    <a class="tag" href="#videos" data-category="Nhật Bản">Nhật Bản</a>
-    <a class="tag" href="#videos" data-category="Hàn Quốc">Hàn Quốc</a>
-    <a class="tag" href="#videos" data-category="Trung Quốc">Trung Quốc</a>
-    <a class="tag" href="#videos" data-category="Châu Âu">Châu Âu</a>
-    <a class="tag" href="#videos" data-category="Thái Lan">Thái Lan</a>
-    <a class="tag" href="#videos" data-category="Gay">Gay</a>
-  </div>
-  <section class="grid" id="videoGrid" aria-label="Danh sách video">
-    <a class="card" href="#" data-title="Video mẫu Việt Nam 1" data-category="Việt Nam"><div class="thumb"><span>ẢNH ĐẠI DIỆN 01</span><b class="views">◉ 2K</b></div><h2>Tiêu đề video mẫu Việt Nam</h2></a>
-    <a class="card" href="#" data-title="Video mẫu Nhật Bản 2" data-category="Nhật Bản"><div class="thumb"><span>ẢNH ĐẠI DIỆN 02</span><b class="views">◉ 3K</b></div><h2>Tiêu đề video mẫu Nhật Bản</h2></a>
-    <a class="card" href="#" data-title="Video mẫu Hàn Quốc 3" data-category="Hàn Quốc"><div class="thumb"><span>ẢNH ĐẠI DIỆN 03</span><b class="views">◉ 10K</b></div><h2>Tiêu đề video mẫu Hàn Quốc</h2></a>
-    <a class="card" href="#" data-title="Video mẫu Trung Quốc 4" data-category="Trung Quốc"><div class="thumb"><span>ẢNH ĐẠI DIỆN 04</span><b class="views">◉ 14K</b></div><h2>Tiêu đề video mẫu Trung Quốc</h2></a>
-    <a class="card" href="#" data-title="Video mẫu Châu Âu 5" data-category="Châu Âu"><div class="thumb"><span>ẢNH ĐẠI DIỆN 05</span><b class="views">◉ 17K</b></div><h2>Tiêu đề video mẫu Châu Âu</h2></a>
-    <a class="card" href="#" data-title="Video mẫu Thái Lan 6" data-category="Thái Lan"><div class="thumb"><span>ẢNH ĐẠI DIỆN 06</span><b class="views">◉ 34K</b></div><h2>Tiêu đề video mẫu Thái Lan</h2></a>
-    <a class="card" href="#" data-title="Video mẫu Gay 7" data-category="Gay"><div class="thumb"><span>ẢNH ĐẠI DIỆN 07</span><b class="views">◉ 24K</b></div><h2>Tiêu đề video mẫu danh mục Gay</h2></a>
-    <a class="card" href="#" data-title="Video mẫu Việt Nam 8" data-category="Việt Nam"><div class="thumb"><span>ẢNH ĐẠI DIỆN 08</span><b class="views">◉ 49K</b></div><h2>Tiêu đề video mẫu mới nhất</h2></a>
-    <a class="card" href="#" data-title="Video mẫu khác 9" data-category="Khác"><div class="thumb"><span>ẢNH ĐẠI DIỆN 09</span><b class="views">◉ 11K</b></div><h2>Tiêu đề video mẫu khác</h2></a>
-    <p class="empty" id="empty">Không tìm thấy nội dung phù hợp.</p>
-  </section>
-  <div class="pagination" id="pagination" aria-label="Phân trang"></div>
-  <section class="description">
-    <p><strong>SEXVIP</strong> — Trang danh mục video mẫu. Bạn có thể thay tiêu đề, ảnh đại diện, danh mục và liên kết bằng nội dung mà bạn có quyền đăng.</p>
-    <div class="tags">
-      <a href="#videos" data-category="Việt Nam">Video Việt Nam</a>
-      <a href="#videos" data-category="Nhật Bản">Video Nhật Bản</a>
-      <a href="#videos" data-category="Hàn Quốc">Video Hàn Quốc</a>
-      <a href="#videos" data-category="Trung Quốc">Video Trung Quốc</a>
-      <a href="#videos" data-category="Châu Âu">Video Châu Âu</a>
-      <a href="#videos" data-category="Thái Lan">Video Thái Lan</a>
-    </div>
-  </section>
-</main>
-<footer>
-  <div><strong style="color:#ff526f">SEXVIP</strong> · Giao diện website mẫu</div>
-  <div>© <span id="year"></span> SEXVIP. Nội dung do chủ website quản lý.</div>
-  <div><a href="#top">Về đầu trang ↑</a></div>
-</footer>
-<button class="to-top" id="toTop" aria-label="Về đầu trang">↑</button>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SEXVIP – Trang chủ</title><style>
+:root{--red:#f21d32;--bg:#101010;--panel:#1b1b1b;--line:#333}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:#f5f5f5;font-family:Arial,sans-serif}header{background:#080808;border-bottom:1px solid #292929}.top,.wrap{max-width:1200px;margin:auto;padding:16px 20px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px}.logo{font-size:40px;font-weight:900;color:var(--red);text-decoration:none}.logo span{color:white}.age{font-size:11px;color:#ddd;border:1px solid #555;border-radius:20px;padding:6px}nav,.cat,.pager,.actions{display:flex;gap:8px;flex-wrap:wrap}button{cursor:pointer}nav button,.cat button,.pager button,.actions button{background:#242424;color:white;border:1px solid #383838;border-radius:6px;padding:10px 13px;font-weight:bold}nav button.active,.cat button.active,nav button:hover,.cat button:hover{background:var(--red);border-color:var(--red)}.search{display:flex;gap:8px;margin:18px 0}.search input{flex:1;min-width:0;background:#222;color:white;border:1px solid #444;border-radius:6px;padding:13px}.search button,.comments button{background:var(--red);color:white;border:0;border-radius:6px;padding:10px 16px}.ad-label{font-size:11px;color:#777;margin:12px 0 7px;letter-spacing:1px}.ad-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.ad-slot{min-height:54px;border:1px dashed #414141;background:#151515;color:#777;border-radius:6px;display:grid;place-items:center;text-align:center;padding:8px;font-size:12px}.large{min-height:78px}h1{font-size:24px;margin:24px 0 8px}.sub,.meta{color:#aaa;font-size:13px}.cat{margin:16px 0}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.card{background:var(--panel);border:1px solid #2d2d2d;border-radius:8px;overflow:hidden}.thumb{aspect-ratio:16/10;background:linear-gradient(135deg,#303030,#111);display:grid;place-items:center;color:#888;font-size:12px;position:relative}.thumb:after{content:'▶';position:absolute;font-size:24px;color:white;background:#0009;border-radius:50%;padding:14px}.tag{position:absolute;top:8px;left:8px;background:var(--red);color:white;padding:5px;border-radius:3px;z-index:1}.card-body{padding:12px}.card h3{font-size:15px;margin:0 0 8px}.meta{margin-bottom:10px}.actions button{flex:1;padding:8px 4px}.comments{display:none;margin-top:10px}.comments textarea{width:100%;min-height:55px;background:#111;color:white;border:1px solid #444;border-radius:5px;padding:8px}.comments button{margin-top:6px}.comment-list{font-size:12px;overflow-wrap:anywhere}.pager{justify-content:center;align-items:center;margin:24px}.notice{background:#211517;border:1px solid #54232a;padding:12px;border-radius:6px;font-size:13px;color:#ddd;margin-top:20px}footer{text-align:center;border-top:1px solid #292929;padding:22px;color:#aaa;font-size:13px}@media(max-width:850px){.grid{grid-template-columns:repeat(3,1fr)}}@media(max-width:600px){.wrap{padding:13px}.top{padding:12px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.ad-grid{grid-template-columns:repeat(2,1fr)}.logo{font-size:30px}.age{font-size:9px}}
+</style></head><body>
+<header><div class="top"><a class="logo" href="#">SEX<span>VIP</span></a><span class="age">18+ · CHỈ DÀNH CHO NGƯỜI TRƯỞNG THÀNH</span></div></header>
+<main class="wrap"><nav><button class="active" data-page="home">1 · Trang chủ</button><button data-page="categories">2 · Danh mục</button><button data-page="popular">3 · Phổ biến</button></nav>
+<form class="search" id="searchForm"><input id="searchInput" placeholder="Tìm kiếm video..." aria-label="Tìm kiếm"><button>Tìm kiếm</button></form>
+<h1 id="pageTitle">Trang chủ</h1><p class="sub">Giao diện mẫu SEXVIP — có thể thay ảnh và nội dung video sau.</p>
+<div class="cat" id="categories"><button class="active" data-category="all">Tất cả</button><button data-category="japan">Nhật Bản</button><button data-category="europe">Châu Âu</button><button data-category="asia">Châu Á</button><button data-category="other">Khác</button></div>
+<section class="grid" id="videoGrid"></section><div class="pager"><button id="prev">← Trước</button><span id="pageInfo">Trang 1 / 1</span><button id="next">Sau →</button></div>
+<div class="notice">Đây là khung giao diện mẫu. Thích và bình luận hiện chỉ lưu trong trình duyệt này; muốn mọi người cùng thấy cần kết nối cơ sở dữ liệu và thiết lập bảo mật.</div></main>
+<footer>SEXVIP — Giao diện mẫu · Chỉ dành cho người trưởng thành (18+). Hãy chỉ đăng nội dung hợp pháp và có sự đồng thuận.</footer>
 <script>
-const cards=[...document.querySelectorAll('.card')], input=document.getElementById('searchInput'), empty=document.getElementById('empty');
-let category='Tất cả', page=1; const perPage=8;
-function update(){
- const q=input.value.trim().toLocaleLowerCase('vi');
- const filtered=cards.filter(c=>(category==='Tất cả'||c.dataset.category===category)&&(c.dataset.title+' '+c.innerText+' '+c.dataset.category).toLocaleLowerCase('vi').includes(q));
- const pages=Math.max(1,Math.ceil(filtered.length/perPage)); page=Math.min(page,pages);
- cards.forEach(c=>c.style.display='none');
- filtered.forEach((c,i)=>c.style.display=(i>=(page-1)*perPage&&i<page*perPage)?'block':'none');
- empty.style.display=filtered.length?'none':'block';
- document.getElementById('sectionTitle').textContent=category==='Tất cả'?'Video mới nhất':'Video danh mục '+category;
- const pag=document.getElementById('pagination');pag.innerHTML='';
- if(pages>1){for(let i=1;i<=pages;i++){const b=document.createElement('button');b.textContent=i;b.className=i===page?'active':'';b.onclick=()=>{page=i;update();document.getElementById('videos').scrollIntoView()};pag.appendChild(b)}}
-}
-function setCategory(c){category=c;page=1;document.querySelectorAll('[data-category]').forEach(a=>a.classList.toggle('active',a.dataset.category===c));update()}
-document.getElementById('searchForm').addEventListener('submit',e=>{e.preventDefault();page=1;update()});
-input.addEventListener('input',()=>{page=1;update()});
-document.querySelectorAll('[data-category]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();setCategory(a.dataset.category)}));
-document.getElementById('menuBtn').onclick=()=>document.getElementById('nav').classList.toggle('open');
-document.getElementById('showCategories').onclick=()=>document.getElementById('nav').classList.toggle('open');
-document.getElementById('year').textContent=new Date().getFullYear();
-const topBtn=document.getElementById('toTop');window.addEventListener('scroll',()=>topBtn.style.display=window.scrollY>400?'block':'none');topBtn.onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
-// Các thẻ video đang là mẫu: thay href="#" bằng URL trang xem video của bạn.
-update();
-</script>
-</body>
-</html>
+const videos=[["Video mẫu 01","japan",12800],["Video mẫu 02","europe",9600],["Video mẫu 03","asia",8700],["Video mẫu 04","other",7200],["Video mẫu 05","japan",6800],["Video mẫu 06","europe",5400],["Video mẫu 07","asia",4200],["Video mẫu 08","other",3100]];
+let page="home",cat="all",keyword="",current=1;
+function read(k,d){try{return JSON.parse(localStorage.getItem(k))||d}catch(e){return d}}function save(k,v){localStorage.setItem(k,JSON.stringify(v))}
+function render(){let arr=videos.map((v,i)=>({...v,id:i})).filter(v=>(cat==="all"||v[1]===cat)&&v[0].toLowerCase().includes(keyword.toLowerCase()));if(page==="popular")arr.sort((a,b)=>b[2]-a[2]);let total=Math.max(1,Math.ceil(arr.length/8));current=Math.min(current,total);let grid=document.getElementById("videoGrid");grid.innerHTML="";arr.slice((current-1)*8,current*8).forEach(v=>{let likes=read("svlikes",{}),comments=read("svcomments",{}),card=document.createElement("article");card.className="card";card.innerHTML='<div class="thumb"><span class="tag">MẪU</span>Ảnh video thêm sau</div><div class="card-body"><h3></h3><div class="meta">Lượt xem mẫu: '+v[2].toLocaleString("vi-VN")+'</div><div class="actions"><button class="like">♥ Thích ('+(likes[v.id]||0)+')</button><button class="toggle">Bình luận</button></div><div class="comments"><textarea placeholder="Viết bình luận..."></textarea><button class="send">Gửi bình luận</button><div class="comment-list"></div></div></div>';card.querySelector("h3").textContent=v[0];let area=card.querySelector(".comments"),list=card.querySelector(".comment-list");(comments[v.id]||[]).forEach(c=>{let p=document.createElement("p");p.textContent="• "+c;list.appendChild(p)});card.querySelector(".like").onclick=()=>{let x=read("svlikes",{});x[v.id]=(x[v.id]||0)+1;save("svlikes",x);render()};card.querySelector(".toggle").onclick=()=>area.style.display=area.style.display==="block"?"none":"block";card.querySelector(".send").onclick=()=>{let t=card.querySelector("textarea"),s=t.value.trim();if(!s){alert("Nhập bình luận trước nhé.");return}let x=read("svcomments",{});x[v.id]=x[v.id]||[];x[v.id].push(s);save("svcomments",x);render()};grid.appendChild(card)});document.getElementById("pageInfo").textContent="Trang "+current+" / "+total;document.getElementById("pageTitle").textContent=page==="home"?"Trang chủ":page==="categories"?"Danh mục":"Phổ biến"}
+document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>{page=b.dataset.page;current=1;document.querySelectorAll("nav button").forEach(x=>x.classList.toggle("active",x===b));render()});document.querySelectorAll("#categories button").forEach(b=>b.onclick=()=>{cat=b.dataset.category;current=1;document.querySelectorAll("#categories button").forEach(x=>x.classList.toggle("active",x===b));render()});document.getElementById("searchForm").onsubmit=e=>{e.preventDefault();keyword=document.getElementById("searchInput").value.trim();current=1;render()};document.getElementById("prev").onclick=()=>{current=Math.max(1,current-1);render()};document.getElementById("next").onclick=()=>{current++;render()};render();
+</script></body></html>
