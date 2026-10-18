@@ -61,9 +61,9 @@ footer{padding:24px 12px;text-align:center;color:#888;font-size:12px}
 <div class="field"><label for="videoTitle">Tên video *</label><input id="videoTitle" required placeholder="Ví dụ: Video mới 01"></div>
 <div class="field"><label for="videoCategory">Danh mục</label><select id="videoCategory"><option value="japan">Nhật Bản</option><option value="europe">Châu Âu</option><option value="asia">Châu Á</option><option value="other">Khác</option></select></div>
 <div class="field full"><label for="videoUrl">Đường dẫn video (MP4 hoặc link xem trực tiếp)</label><input id="videoUrl" type="url" placeholder="https://..."></div>
-<div class="field"><label for="videoFile">Hoặc chọn tệp video từ máy</label><input id="videoFile" type="file" accept="video/*"></div>
 <div class="field"><label for="thumbUrl">Đường dẫn ảnh đại diện (không bắt buộc)</label><input id="thumbUrl" type="url" placeholder="https://.../anh.jpg"></div>
-<div class="field full"><label for="videoDesc">Mô tả nội dung</label><textarea id="videoDesc" placeholder="Nhập mô tả video..."></textarea></div>
+<div class="field"><label for="thumbUrl">Đường dẫn ảnh đại diện (không bắt buộc)</label><input id="thumbUrl" type="url" placeholder="https://.../anh.jpg"></div><div class="field"><label for="thumbUrl">Đường dẫn ảnh đại diện (không bắt buộc)</label><input id="thumbUrl" type="url" placeholder="https://.../anh.jpg"></div>
+<div class="field"><label for="thumbFile">Hoặc chọn ảnh từ máy tính</label><input id="thumbFile" type="file" accept="image/*"></div>
 </div>
 <div class="form-actions"><button class="primary" type="submit">Lưu video vào sảnh</button><button type="button" id="cancelAdmin">Đóng</button></div>
 <p id="formMessage" class="small" aria-live="polite"></p>
