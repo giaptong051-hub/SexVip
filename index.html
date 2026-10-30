@@ -1,24 +1,130 @@
 <!doctype html>
 <html lang="vi">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
 <title>SEXVIP — Trang chủ</title>
 <style>
-:root{--bg:#101010;--panel:#1b1b1b;--line:#343434;--muted:#aaa;--red:#f21d32;--pink:#ff5b9d;--gold:#ffc857}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:#f4f4f4;font:15px/1.5 Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}header{background:#151515;border-bottom:1px solid #292929;position:sticky;top:0;z-index:5}.wrap{max-width:1200px;margin:auto;padding:14px 16px}.top{display:flex;align-items:center;gap:16px;flex-wrap:wrap}.logo{font-size:clamp(28px,4vw,42px);font-weight:900;letter-spacing:1px;white-space:nowrap;background:linear-gradient(90deg,#ff303e,#ffc857,#fff);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 1px #511}.search{display:flex;flex:1;min-width:220px;gap:8px}input,select,textarea{width:100%;background:#111;color:#fff;border:1px solid #414141;border-radius:8px;padding:11px 12px;font:inherit}button,.btn{background:#292929;color:#fff;border:1px solid #393939;padding:10px 14px;border-radius:8px;font-weight:700;cursor:pointer}button:hover,.btn:hover{border-color:var(--red)}button:disabled{opacity:.45;cursor:not-allowed}.primary{background:var(--red);border-color:var(--red)}nav{display:flex;gap:8px;flex-wrap:wrap;padding-top:12px}nav button.active{background:var(--red);border-color:var(--red)}main{max-width:1200px;margin:auto;padding:18px 16px 34px}.hero{border:1px solid #343434;border-radius:14px;padding:22px;background:radial-gradient(ellipse at top right,#5b101d 0,#241117 40%,#191919 75%);margin-bottom:22px}.hero h1{margin:0 0 5px;font-size:clamp(28px,5vw,42px);color:#ff3347}.hero p{margin:0;color:#ddd}.section-title{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:22px 0 14px}.section-title h2{font-size:25px;margin:0;color:var(--pink)}.muted{color:var(--muted);font-size:13px}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.card{background:var(--panel);border:1px solid #303030;border-radius:10px;overflow:hidden;min-width:0;cursor:pointer}.placeholder-card{cursor:default}.placeholder-card .thumb{background:#303030;color:#eee}.thumb{aspect-ratio:16/9;background:#080808;display:flex;align-items:center;justify-content:center;overflow:hidden;color:#777}.thumb img{width:100%;height:100%;object-fit:cover}.placeholder{text-align:center;padding:12px}.placeholder .camera{font-size:38px;display:block}.card-body{padding:10px 11px}.card h3{font-size:15px;line-height:1.35;margin:0 0 6px;overflow-wrap:anywhere}.card-meta{font-size:12px;color:var(--muted);display:flex;justify-content:space-between;gap:8px}.empty{padding:28px;text-align:center;border:1px dashed #444;border-radius:10px;color:#bbb}.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;margin:20px 0}.panel h2{margin:0 0 10px;color:var(--pink)}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field label{display:block;font-size:13px;color:#ddd;margin-bottom:6px}.field.full{grid-column:1/-1}textarea{min-height:78px;resize:vertical}.notice{color:#c9c9c9;font-size:13px;margin:8px 0 14px}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}footer{text-align:center;color:#aaa;border-top:1px solid #292929;padding:22px 12px;font-size:13px}.modal{position:fixed;inset:0;background:#000d;z-index:10;display:none;overflow:auto;padding:24px 12px}.modal.open{display:block}.modal-box{max-width:900px;margin:auto;background:#171717;border:1px solid #444;border-radius:12px;padding:16px}.modal-head{display:flex;align-items:center;justify-content:space-between;gap:12px}.player{background:#000;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;margin:12px 0;border-radius:8px;overflow:hidden}.player video,.player iframe{width:100%;height:100%;object-fit:contain;border:0}.detail-actions{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.comment-list{padding-left:20px;color:#ddd}.hidden{display:none!important}.contact{color:#ddd}.ad-slot{display:none!important}.status{padding:10px;border-radius:8px;background:#222;margin-top:10px;white-space:pre-wrap}.danger{background:#9e1725;border-color:#9e1725}@media(max-width:850px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:600px){.wrap{padding:12px}main{padding:12px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.card-body{padding:8px}.card h3{font-size:13px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.hero{padding:16px}.section-title h2{font-size:22px}.search{min-width:0;flex-basis:100%;order:3}}
+:root{--bg:#101010;--panel:#1b1b1b;--line:#343434;--muted:#aaa;--red:#f21d32;--pink:#ff5b9d;--gold:#ffc857}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:#f4f4f4;font:15px/1.5 Arial,Helvetica,sans-serif}
+a{color:inherit;text-decoration:none}
+header{background:#151515;border-bottom:1px solid #292929;position:sticky;top:0;z-index:5}
+.wrap{max-width:1200px;margin:auto;padding:14px 16px}
+.top{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.logo{font-size:clamp(28px,4vw,42px);font-weight:900;letter-spacing:1px;white-space:nowrap;color:#ff3040}
+.search{display:flex;flex:1;min-width:220px;gap:8px}
+input,select,textarea{width:100%;background:#111;color:#fff;border:1px solid #414141;border-radius:8px;padding:11px 12px;font:inherit}
+button,.btn{background:#292929;color:#fff;border:1px solid #393939;padding:10px 14px;border-radius:8px;font-weight:700;cursor:pointer}
+button:hover,.btn:hover{border-color:var(--red)}
+button:disabled{opacity:.45;cursor:not-allowed}
+.primary{background:var(--red);border-color:var(--red)}
+nav{display:flex;gap:8px;flex-wrap:wrap;padding-top:12px}
+nav button.active{background:var(--red);border-color:var(--red)}
+main{max-width:1200px;margin:auto;padding:18px 16px 34px}
+.hero{border:1px solid #343434;border-radius:14px;padding:22px;background:radial-gradient(ellipse at top right,#5b101d 0,#241117 40%,#191919 75%);margin-bottom:22px}
+.hero h1{margin:0 0 5px;font-size:clamp(28px,5vw,42px);color:#ff3347}
+.hero p{margin:0;color:#ddd}
+.section-title{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:22px 0 14px}
+.section-title h2{font-size:25px;margin:0;color:var(--pink)}
+.muted{color:var(--muted);font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.card{background:var(--panel);border:1px solid #303030;border-radius:10px;overflow:hidden;min-width:0;cursor:pointer}
+.thumb{aspect-ratio:16/9;background:#080808;display:flex;align-items:center;justify-content:center;overflow:hidden;color:#777}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.placeholder{text-align:center;padding:12px}
+.placeholder .camera{font-size:38px;display:block}
+.card-body{padding:10px 11px}
+.card h3{font-size:15px;line-height:1.35;margin:0 0 6px;overflow-wrap:anywhere}
+.card-meta{font-size:12px;color:var(--muted);display:flex;justify-content:space-between;gap:8px}
+.empty{padding:28px;text-align:center;border:1px dashed #444;border-radius:10px;color:#bbb}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;margin:20px 0}
+.panel h2{margin:0 0 10px;color:var(--pink)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.field label{display:block;font-size:13px;color:#ddd;margin-bottom:6px}
+.field.full{grid-column:1/-1}
+textarea{min-height:78px;resize:vertical}
+.notice{color:#c9c9c9;font-size:13px;margin:8px 0 14px}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+footer{text-align:center;color:#aaa;border-top:1px solid #292929;padding:22px 12px;font-size:13px}
+.modal{position:fixed;inset:0;background:#000d;z-index:10;display:none;overflow:auto;padding:24px 12px}
+.modal.open{display:block}
+.modal-box{max-width:900px;margin:auto;background:#171717;border:1px solid #444;border-radius:12px;padding:16px}
+.modal-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.player{background:#000;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;margin:12px 0;border-radius:8px;overflow:hidden}
+.player video{width:100%;height:100%;object-fit:contain;border:0}
+.detail-actions{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.comment-list{padding-left:20px;color:#ddd}
+.hidden{display:none!important}
+.contact{color:#ddd}
+.status{padding:10px;border-radius:8px;background:#222;margin-top:10px;white-space:pre-wrap;overflow-wrap:anywhere}
+.danger{background:#9e1725;border-color:#9e1725}
+.progress{height:7px;background:#444;border-radius:10px;overflow:hidden;margin-top:8px}
+.progress>span{display:block;height:100%;width:0;background:var(--red);transition:width .2s}
+@media(max-width:850px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:600px){.wrap{padding:12px}main{padding:12px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.card-body{padding:8px}.card h3{font-size:13px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.hero{padding:16px}.section-title h2{font-size:22px}.search{min-width:0;flex-basis:100%;order:3}}
 </style>
 </head>
 <body>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<header><div class="wrap"><div class="top"><a class="logo" href="#" id="homeLink">SEXVIP</a><button id="ownerLoginBtn" type="button" style="background:#d21d32;color:white;border:0;padding:8px 12px;border-radius:6px">Đăng nhập chủ web</button><form class="search" id="searchForm"><input id="searchInput" type="search" placeholder="Tìm kiếm video..." aria-label="Tìm kiếm video"><button class="primary">Tìm kiếm</button></form><button class="primary" id="showUpload">＋ Đăng video</button><button id="logoutBtn" class="hidden" type="button">Đăng xuất</button></div><nav id="categoryNav" aria-label="Danh mục"><button class="active" data-cat="all">Trang chủ</button><button data-cat="viet">phim sex viet</button><button data-cat="china">sex trung</button><button data-cat="japan">sex nhật</button><button data-cat="europe">sex châu âu</button><button data-cat="other">khác</button></nav></div></header>
+<header><div class="wrap">
+  <div class="top">
+    <a class="logo" href="#" id="homeLink">SEXVIP</a>
+    <button id="ownerLoginBtn" type="button" class="primary">Đăng nhập chủ web</button>
+    <form class="search" id="searchForm"><input id="searchInput" type="search" placeholder="Tìm kiếm video..." aria-label="Tìm kiếm video"><button class="primary">Tìm kiếm</button></form>
+    <button class="primary hidden" id="showUpload" type="button">＋ Đăng video</button>
+    <button id="logoutBtn" class="hidden" type="button">Đăng xuất</button>
+  </div>
+  <nav id="categoryNav" aria-label="Danh mục">
+    <button class="active" data-cat="all">Trang chủ</button><button data-cat="viet">phim sex viet</button><button data-cat="china">sex trung</button><button data-cat="japan">sex nhật</button><button data-cat="europe">sex châu âu</button><button data-cat="other">khác</button>
+  </nav>
+</div></header>
 <main>
-<section class="hero"><h1>SEXVIP</h1><p>Video mới theo danh mục.</p></section>
-<section id="uploadPanel" class="panel hidden"><h2>＋ Đăng video mới</h2><p class="notice">Video sẽ được tải lên kho trực tuyến và danh sách được lưu trên Supabase, để còn sau khi tải lại trang. Chỉ chủ web đã đăng nhập mới được đăng và xóa.</p>
-<form id="uploadForm"><div class="form-grid"><div class="field"><label for="videoTitle">Tên video *</label><input id="videoTitle" required maxlength="140" placeholder="Nhập tên video"></div><div class="field"><label for="videoCategory">Danh mục</label><select id="videoCategory"><option value="viet">phim sex viet</option><option value="china">sex trung</option><option value="japan">sex nhật</option><option value="europe">sex châu âu</option><option value="other">khác</option></select></div><div class="field"><label for="videoFile">Chọn file video *</label><input id="videoFile" type="file" accept="video/mp4,video/webm,video/quicktime,video/x-m4v" required></div><div class="field"><label for="coverFile">Ảnh bìa (không bắt buộc)</label><input id="coverFile" type="file" accept="image/jpeg,image/png,image/webp,image/gif"></div><div class="field full"><label for="videoDesc">Mô tả ngắn</label><textarea id="videoDesc" maxlength="500" placeholder="Mô tả video"></textarea></div></div><div class="actions"><button class="primary" type="submit" id="uploadSubmit">Tải lên và đăng video</button><button type="button" id="hideUpload">Đóng khung đăng</button></div><p id="uploadStatus" class="status" role="status">Đang chờ cấu hình Supabase.</p></form></section>
-<div class="section-title"><h2 id="listTitle">Phim mới nhất</h2><span class="muted" id="resultCount"></span></div><section id="videoGrid" class="grid"></section><section id="emptyState" class="empty hidden">Chưa có video phù hợp.</section><div class="actions" id="pagination"></div>
-<section class="panel"><h2>Top Tìm Kiếm</h2><div class="actions" id="tags"><button data-tag="tình cảm">tình cảm</button><button data-tag="phim mới">phim mới</button><button data-tag="Việt Nam">Việt Nam</button><button data-tag="Trung Quốc">Trung Quốc</button><button data-tag="Nhật Bản">Nhật Bản</button><button data-tag="Châu Âu">Châu Âu</button></div></section>
-<section class="panel contact"><h2>Thông tin liên hệ</h2><p>Telegram: <span id="telegramText">Chưa cập nhật</span></p></section>
-</main><footer><strong>SEXVIP</strong><br>Chỉ dành cho người trưởng thành từ 18 tuổi trở lên.</footer>
-<div class="modal" id="watchModal" role="dialog" aria-modal="true" aria-label="Xem video"><div class="modal-box"><div class="modal-head"><h2 id="modalTitle">Xem video</h2><button id="closeModal" aria-label="Đóng">✕ Đóng</button></div><div class="player" id="playerArea"><span class="muted">Chưa có nguồn phát video.</span></div><p id="modalDesc" class="muted"></p><div class="detail-actions"><span id="viewsLabel" class="btn">0 lượt xem</span><button id="likeBtn">♡ Thích <span id="likeCount">0</span></button></div><h3>Bình luận</h3><form id="commentForm" class="search"><input id="commentInput" maxlength="300" placeholder="Viết bình luận..." required><button class="primary">Gửi</button></form><ul id="commentList" class="comment-list"></ul><div class="actions"><button id="deleteVideoBtn" class="danger hidden" type="button">Xóa video (chủ web)</button></div><h3>Phim liên quan</h3><div id="relatedGrid" class="grid"></div></div></div>
+  <section class="hero"><h1>SEXVIP</h1><p>Video mới theo danh mục.</p></section>
+  <section id="uploadPanel" class="panel hidden">
+    <h2>＋ Đăng video mới</h2>
+    <p class="notice">Có thể chọn tệp video từ máy hoặc dán đường dẫn video trực tiếp. Chỉ chủ web đã đăng nhập mới được đăng và xóa.</p>
+    <form id="uploadForm">
+      <div class="form-grid">
+        <div class="field"><label for="videoTitle">Tên video *</label><input id="videoTitle" required maxlength="140" placeholder="Nhập tên video"></div>
+        <div class="field"><label for="videoCategory">Danh mục</label><select id="videoCategory"><option value="viet">phim sex viet</option><option value="china">sex trung</option><option value="japan">sex nhật</option><option value="europe">sex châu âu</option><option value="other">khác</option></select></div>
+        <div class="field"><label for="videoFile">Chọn file video (hoặc dùng link bên dưới)</label><input id="videoFile" type="file" accept="video/mp4,video/webm,video/quicktime,video/x-m4v"></div>
+        <div class="field"><label for="videoUrlInput">Hoặc link video trực tiếp (HTTPS)</label><input id="videoUrlInput" type="url" placeholder="https://.../video.mp4"></div>
+        <div class="field"><label for="coverFile">Ảnh bìa (không bắt buộc)</label><input id="coverFile" type="file" accept="image/jpeg,image/png,image/webp,image/gif"></div>
+        <div class="field"><label for="coverUrlInput">Hoặc link ảnh bìa</label><input id="coverUrlInput" type="url" placeholder="https://.../cover.jpg"></div>
+        <div class="field full"><label for="videoDesc">Mô tả ngắn</label><textarea id="videoDesc" maxlength="500" placeholder="Mô tả video"></textarea></div>
+      </div>
+      <div class="actions"><button class="primary" type="submit" id="uploadSubmit">Tải lên và đăng video</button><button type="button" id="hideUpload">Đóng khung đăng</button></div>
+      <p id="uploadStatus" class="status" role="status">Đang kiểm tra kết nối Supabase...</p>
+      <div class="progress hidden" id="uploadProgress"><span id="uploadProgressBar"></span></div>
+    </form>
+  </section>
+  <div class="section-title"><h2 id="listTitle">Phim mới nhất</h2><span class="muted" id="resultCount"></span></div>
+  <section id="videoGrid" class="grid"></section>
+  <section id="emptyState" class="empty hidden">Chưa có video phù hợp.</section>
+  <div class="actions" id="pagination"></div>
+  <section class="panel"><h2>Top Tìm Kiếm</h2><div class="actions" id="tags"><button data-tag="tình cảm">tình cảm</button><button data-tag="phim mới">phim mới</button><button data-tag="Việt Nam">Việt Nam</button><button data-tag="Trung Quốc">Trung Quốc</button><button data-tag="Nhật Bản">Nhật Bản</button><button data-tag="Châu Âu">Châu Âu</button></div></section>
+  <section class="panel contact"><h2>Thông tin liên hệ</h2><p>Telegram: <span id="telegramText">Chưa cập nhật</span></p></section>
+</main>
+<footer><strong>SEXVIP</strong><br>Chỉ dành cho người trưởng thành từ 18 tuổi trở lên. Chỉ đăng nội dung hợp pháp, có sự đồng thuận và quyền sử dụng.</footer>
+
+<div class="modal" id="watchModal" role="dialog" aria-modal="true" aria-label="Xem video">
+  <div class="modal-box">
+    <div class="modal-head"><h2 id="modalTitle">Xem video</h2><button id="closeModal" aria-label="Đóng">✕ Đóng</button></div>
+    <div class="player" id="playerArea"><span class="muted">Chọn video để xem.</span></div>
+    <p id="playerError" class="status hidden"></p>
+    <p id="modalDesc" class="muted"></p>
+    <div class="detail-actions"><span id="viewsLabel" class="btn">0 lượt xem</span><button id="likeBtn" type="button">♡ Thích <span id="likeCount">0</span></button></div>
+    <h3>Bình luận</h3>
+    <form id="commentForm" class="search"><input id="commentInput" maxlength="300" placeholder="Bình luận chưa được bật" disabled><button class="primary" disabled>Gửi</button></form>
+    <p class="muted">Bình luận trực tuyến chưa được bật vì cần bảng comments và chính sách chống spam riêng.</p>
+    <ul id="commentList" class="comment-list"></ul>
+    <div class="actions"><button id="deleteVideoBtn" class="danger hidden" type="button">Xóa video (chủ web)</button></div>
+    <h3>Phim liên quan</h3><div id="relatedGrid" class="grid"></div>
+  </div>
+</div>
+
 <script>
 (()=>{'use strict';
 const $=id=>document.getElementById(id);
@@ -26,34 +132,94 @@ const SUPABASE_URL='https://rtbxcpknkkidnnmrawnx.supabase.co';
 const SUPABASE_KEY='sb_publishable_8w91Z626v_mZBgsGQOu7_A_szeGDiKF';
 const BUCKET='sexvip media';
 const TABLE='videos';
-const OWNER_EMAIL='Giaptong051@gmail.com'; // Có thể điền email tài khoản chủ web để hiện đúng trạng thái đăng nhập; không phải mật khẩu.
+const OWNER_EMAIL='giaptong051@gmail.com';
+const FREE_MAX_FILE_BYTES=50*1024*1024; // Supabase Free hiện giới hạn 50 MB mỗi tệp; nâng giới hạn sau khi nâng gói.
 const cats={viet:'phim sex viet',china:'sex trung',japan:'sex nhật',europe:'sex châu âu',other:'khác'};
 let db=null,session=null,videos=[],activeCat='all',query='',page=1,currentId=null;
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const catname=c=>cats[c]||'khác';
-const status=(msg)=>{$('uploadStatus').textContent=msg};
+const status=msg=>{$('uploadStatus').textContent=msg};
+const progress=p=>{$('uploadProgress').classList.remove('hidden');$('uploadProgressBar').style.width=Math.max(0,Math.min(100,p))+'%'};
 const safeFileName=name=>String(name||'file').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-zA-Z0-9._-]+/g,'-').replace(/^-+|-+$/g,'').slice(-100)||'file';
-function configured(){return window.supabase&&SUPABASE_KEY!=='DAN_PUBLISHABLE_KEY_CUA_BRO_VAO_DAY'&&SUPABASE_KEY.trim().length>20}
-function initDb(){if(configured()){db=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY);return true}return false}
+function configured(){return !!(window.supabase&&SUPABASE_KEY&&SUPABASE_KEY.startsWith('sb_publishable_'))}
+function initDb(){if(!configured())return false;db=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});return true}
 function publicUrl(path){return db.storage.from(BUCKET).getPublicUrl(path).data.publicUrl}
-function normalize(row){return {id:String(row.id),title:row.title,category:row.category,description:row.description||'',url:row.video_url,cover:row.thumbnail_url||'',created:Date.parse(row.created_at)||0,views:Number(row.views||0),likes:Number(row.likes||0),comments:Array.isArray(row.comments)?row.comments:[],video_path:row.video_path,thumbnail_path:row.thumbnail_path}}
-async function loadVideos(){if(!db){videos=[];render();return}const {data,error}=await db.from(TABLE).select('*').order('created_at',{ascending:false}).limit(500);if(error){console.error(error);$('emptyState').textContent='Không tải được danh sách: '+error.message+' — cần kiểm tra bảng videos và quyền đọc Supabase.';$('emptyState').classList.remove('hidden');return}videos=(data||[]).map(normalize);render()}
-function filtered(){return videos.filter(v=>(activeCat==='all'||v.category===activeCat)&&(!query||(v.title+' '+(v.description||'')+' '+catname(v.category)).toLowerCase().includes(query.toLowerCase()))).sort((a,b)=>b.created-a.created)}
-function cover(v){return v.cover?`<img src="${esc(v.cover)}" alt="Ảnh bìa ${esc(v.title)}" loading="lazy" onerror="this.style.display='none'">`:'<div class="placeholder"><span class="camera">▣</span>Chưa có ảnh bìa</div>'}
-function render(){
- const all=filtered(),perPage=50,totalPages=Math.max(1,Math.min(100,Math.ceil(all.length/perPage)));page=Math.max(1,Math.min(totalPages,page));const items=all.slice((page-1)*perPage,page*perPage);
- $('videoGrid').innerHTML=items.map(v=>`<article class="card" tabindex="0" role="button" data-id="${esc(v.id)}"><div class="thumb">${cover(v)}</div><div class="card-body"><h3>${esc(v.title)}</h3><div class="card-meta"><span>${esc(catname(v.category))}</span><span>${Number(v.views||0).toLocaleString('vi-VN')} lượt xem</span></div></div></article>`).join('');
- $('emptyState').classList.toggle('hidden',all.length!==0);$('resultCount').textContent=`${all.length} video · Trang ${page}/${totalPages}`;$('listTitle').textContent=activeCat==='all'?'Phim mới nhất':catname(activeCat);
- $('pagination').innerHTML='';const addPage=(label,p,disabled=false,active=false)=>{const b=document.createElement('button');b.textContent=label;b.disabled=disabled;if(active)b.className='primary';b.onclick=()=>{page=p;render();window.scrollTo({top:0,behavior:'smooth'})};$('pagination').appendChild(b)};addPage('‹ Trước',page-1,page===1);const ps=[...new Set([1,2,page-1,page,page+1,totalPages])].filter(p=>p>=1&&p<=totalPages).sort((a,b)=>a-b);ps.forEach(p=>addPage(String(p),p,false,p===page));addPage('Sau ›',page+1,page===totalPages);
+function normalize(row){
+  const videoPath=row.video_path||null;
+  const videoUrl=row.video_url|| (videoPath?publicUrl(videoPath):'');
+  const coverPath=row.thumbnail_path||null;
+  const coverUrl=row.thumbnail_url|| (coverPath?publicUrl(coverPath):'');
+  return {id:String(row.id),title:row.title||'Video',category:row.category||'other',description:row.description||'',url:videoUrl,cover:coverUrl,created:row.created_at?Date.parse(row.created_at)||0:0,views:Number(row.views||0),likes:Number(row.likes||0),comments:Array.isArray(row.comments)?row.comments:[],video_path:videoPath,thumbnail_path:coverPath};
 }
-function makePlayer(v,area){area.innerHTML='';if(!v.url){area.textContent='Video chưa có nguồn phát.';return}const video=document.createElement('video');video.src=v.url;video.controls=true;video.playsInline=true;video.preload='metadata';area.appendChild(video)}
-function setOwnerUI(){const isOwner=!!session;$('logoutBtn').classList.toggle('hidden',!isOwner);$('ownerLoginBtn').textContent=isOwner?'Đã đăng nhập chủ web':'Đăng nhập chủ web';$('showUpload').classList.toggle('hidden',!isOwner);$('deleteVideoBtn').classList.toggle('hidden',!isOwner)}
-async function refreshSession(){if(!db){setOwnerUI();return}const {data}=await db.auth.getSession();session=data.session;setOwnerUI()}
-async function login(){if(!db){alert('Chưa cấu hình Supabase Key trong file HTML.');return}const email=prompt('Nhập email tài khoản chủ web Supabase:');if(!email)return;const password=prompt('Nhập mật khẩu Supabase (không gửi cho ai):');if(!password)return;const {data,error}=await db.auth.signInWithPassword({email,password});if(error){alert('Đăng nhập thất bại: '+error.message);return}session=data.session;setOwnerUI();alert('Đăng nhập chủ web thành công.')}
+async function loadVideos(){
+  if(!db){videos=[];render();return}
+  $('emptyState').textContent='Đang tải danh sách video...';$('emptyState').classList.remove('hidden');
+  const {data,error}=await db.from(TABLE).select('*').order('created_at',{ascending:false}).limit(500);
+  if(error){console.error('loadVideos:',error);$('videoGrid').innerHTML='';$('emptyState').textContent='Không tải được danh sách video: '+error.message;return}
+  videos=(data||[]).map(normalize);render();
+}
+function filtered(){return videos.filter(v=>(activeCat==='all'||v.category===activeCat)&&(!query||(v.title+' '+v.description+' '+catname(v.category)).toLowerCase().includes(query.toLowerCase()))).sort((a,b)=>b.created-a.created)}
+function cover(v){return v.cover?`<img src="${esc(v.cover)}" alt="Ảnh bìa" loading="lazy" onerror="this.style.display='none'">`:'<div class="placeholder"><span class="camera">▣</span>Chưa có ảnh bìa</div>'}
+function render(){
+  const all=filtered(),perPage=50,totalPages=Math.max(1,Math.ceil(all.length/perPage));
+  page=Math.max(1,Math.min(totalPages,page));const items=all.slice((page-1)*perPage,page*perPage);
+  $('videoGrid').innerHTML=items.map(v=>`<article class="card" tabindex="0" role="button" data-id="${esc(v.id)}"><div class="thumb">${cover(v)}</div><div class="card-body"><h3>${esc(v.title)}</h3><div class="card-meta"><span>${esc(catname(v.category))}</span><span>${v.views.toLocaleString('vi-VN')} lượt xem</span></div></div></article>`).join('');
+  $('emptyState').classList.toggle('hidden',all.length!==0);
+  if(!all.length)$('emptyState').textContent=query||activeCat!=='all'?'Không tìm thấy video phù hợp.':'Chưa có video.';
+  $('resultCount').textContent=`${all.length} video · Trang ${page}/${totalPages}`;
+  $('listTitle').textContent=activeCat==='all'?'Phim mới nhất':catname(activeCat);
+  $('pagination').innerHTML='';
+  const addPage=(label,p,disabled=false,active=false)=>{const b=document.createElement('button');b.textContent=label;b.disabled=disabled;if(active)b.className='primary';b.onclick=()=>{page=p;render();window.scrollTo({top:0,behavior:'smooth'})};$('pagination').appendChild(b)};
+  if(totalPages>1){addPage('‹ Trước',page-1,page===1);for(let p=Math.max(1,page-2);p<=Math.min(totalPages,page+2);p++)addPage(String(p),p,false,p===page);addPage('Sau ›',page+1,page===totalPages)}
+}
+function setOwnerUI(){
+  const isOwner=!!(session&&session.user&&session.user.email&&session.user.email.toLowerCase()===OWNER_EMAIL.toLowerCase());
+  $('logoutBtn').classList.toggle('hidden',!session);
+  $('ownerLoginBtn').textContent=isOwner?'Đã đăng nhập chủ web':(session?'Tài khoản không có quyền chủ web':'Đăng nhập chủ web');
+  $('showUpload').classList.toggle('hidden',!isOwner);
+  $('deleteVideoBtn').classList.toggle('hidden',!isOwner);
+}
+async function refreshSession(){
+  if(!db){setOwnerUI();return}
+  const {data,error}=await db.auth.getSession();
+  if(error)console.warn('getSession:',error.message);
+  session=data?.session||null;setOwnerUI();
+}
+async function login(){
+  if(!db){alert('Chưa kết nối được Supabase. Kiểm tra cấu hình.');return}
+  const email=prompt('Nhập email chủ website:');if(!email)return;
+  if(email.trim().toLowerCase()!==OWNER_EMAIL.toLowerCase()){alert('Email này không phải email chủ website đã cấu hình.');return}
+  const password=prompt('Nhập mật khẩu Supabase. Không gửi mật khẩu cho ai.');if(!password)return;
+  const {data,error}=await db.auth.signInWithPassword({email:email.trim(),password});
+  if(error){alert('Đăng nhập thất bại: '+error.message);return}
+  session=data.session;setOwnerUI();
+  if(!(session?.user?.email||'').toLowerCase().includes(OWNER_EMAIL.toLowerCase())){await db.auth.signOut();session=null;setOwnerUI();alert('Tài khoản không có quyền chủ web.');return}
+  alert('Đăng nhập chủ web thành công.');
+}
 async function logout(){if(db)await db.auth.signOut();session=null;setOwnerUI()}
-async function uploadFile(file,path){const {error}=await db.storage.from(BUCKET).upload(path,file,{upsert:false,contentType:file.type||'application/octet-stream'});if(error)throw error;return path}
+async function uploadFile(file,path){
+  const {error}=await db.storage.from(BUCKET).upload(path,file,{upsert:false,contentType:file.type||'application/octet-stream',cacheControl:'3600'});
+  if(error)throw error;
+}
+function validHttps(value,label){
+  if(!value)return '';
+  try{const u=new URL(value);if(u.protocol!=='https:')throw new Error();return u.href}catch{return (label+' phải là đường dẫn HTTPS hợp lệ.')}
+}
+function makePlayer(v,area){
+  area.innerHTML='';$('playerError').classList.add('hidden');
+  if(!v.url){$('playerError').textContent='Bản ghi này chưa có đường dẫn video. Kiểm tra cột video_url hoặc video_path trong Supabase.';$('playerError').classList.remove('hidden');return}
+  const video=document.createElement('video');video.controls=true;video.playsInline=true;video.preload='metadata';video.src=v.url;
+  video.addEventListener('error',()=>{
+    const e=video.error;const codes={1:'Phát video bị hủy.',2:'Không tải được video. Kiểm tra kết nối hoặc quyền truy cập Storage.',3:'Định dạng hoặc mã hóa video không được trình duyệt hỗ trợ.',4:'Đường dẫn video không hợp lệ hoặc máy chủ không cung cấp định dạng phát được.'};
+    $('playerError').textContent=(codes[e?.code]||'Không phát được video.')+' Hãy kiểm tra video_url và quyền public của bucket.';
+    $('playerError').classList.remove('hidden');
+  });
+  area.appendChild(video);
+  video.load();
+}
 $('ownerLoginBtn').onclick=login;$('logoutBtn').onclick=logout;
-$('showUpload').onclick=()=>{if(!session){alert('Hãy đăng nhập chủ web trước.');return}$('uploadPanel').classList.remove('hidden');$('uploadPanel').scrollIntoView({behavior:'smooth'})};$('hideUpload').onclick=()=>$('uploadPanel').classList.add('hidden');
+$('showUpload').onclick=()=>{if(!session||session.user.email.toLowerCase()!==OWNER_EMAIL.toLowerCase()){alert('Hãy đăng nhập đúng tài khoản chủ web trước.');return}$('uploadPanel').classList.remove('hidden');$('uploadPanel').scrollIntoView({behavior:'smooth'})};
+$('hideUpload').onclick=()=>$('uploadPanel').classList.add('hidden');
 $('homeLink').onclick=e=>{e.preventDefault();activeCat='all';query='';page=1;$('searchInput').value='';document.querySelectorAll('[data-cat]').forEach(x=>x.classList.toggle('active',x.dataset.cat==='all'));render();window.scrollTo({top:0,behavior:'smooth'})};
 $('categoryNav').addEventListener('click',e=>{const b=e.target.closest('[data-cat]');if(!b)return;activeCat=b.dataset.cat;page=1;document.querySelectorAll('[data-cat]').forEach(x=>x.classList.toggle('active',x===b));render()});
 $('searchForm').addEventListener('submit',e=>{e.preventDefault();query=$('searchInput').value.trim();page=1;render()});
@@ -61,31 +227,86 @@ $('tags').addEventListener('click',e=>{const b=e.target.closest('[data-tag]');if
 $('videoGrid').addEventListener('click',e=>{const c=e.target.closest('[data-id]');if(c)openWatch(c.dataset.id)});
 $('videoGrid').addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.matches('[data-id]')){e.preventDefault();openWatch(e.target.dataset.id)}});
 $('relatedGrid').addEventListener('click',e=>{const c=e.target.closest('[data-related]');if(c)openWatch(c.dataset.related)});
-async function openWatch(id){const v=videos.find(x=>x.id===String(id));if(!v)return;currentId=v.id;$('modalTitle').textContent=v.title;$('modalDesc').textContent=v.description||'';$('viewsLabel').textContent=Number(v.views||0)+' lượt xem';$('likeBtn').textContent='♡ Thích '+Number(v.likes||0);$('commentList').innerHTML=(v.comments||[]).map(c=>'<li>'+esc(c)+'</li>').join('');$('deleteVideoBtn').classList.toggle('hidden',!session);makePlayer(v,$('playerArea'));$('relatedGrid').innerHTML=videos.filter(x=>x.id!==v.id&&x.category===v.category).slice(0,4).map(x=>`<article class="card" data-related="${esc(x.id)}"><div class="thumb">${cover(x)}</div><div class="card-body"><h3>${esc(x.title)}</h3></div></article>`).join('');$('watchModal').classList.add('open');if(db){const {data,error}=await db.rpc('increment_video_views',{video_id:Number(id)});if(!error){v.views=Number(data??v.views+1);$('viewsLabel').textContent=v.views+' lượt xem'}else console.warn('Không tăng được lượt xem:',error.message)}}
-$('closeModal').onclick=()=>$('watchModal').classList.remove('open');$('watchModal').addEventListener('click',e=>{if(e.target===$('watchModal'))$('watchModal').classList.remove('open')});document.addEventListener('keydown',e=>{if(e.key==='Escape')$('watchModal').classList.remove('open')});
-$('likeBtn').onclick=async()=>{if(!db||!currentId)return;const v=videos.find(x=>x.id===currentId);if(!v)return;const {data,error}=await db.rpc('increment_video_likes',{video_id:Number(currentId)});if(error){alert('Chưa tăng được lượt thích: '+error.message);return}v.likes=Number(data??v.likes+1);$('likeBtn').textContent='♡ Thích '+v.likes};
-$('commentForm').addEventListener('submit',async e=>{e.preventDefault();alert('Bình luận trực tuyến cần tạo bảng comments và chính sách chống spam. Chức năng này chưa bật để tránh báo thành công giả.');});
+async function openWatch(id){
+  const v=videos.find(x=>x.id===String(id));if(!v)return;currentId=v.id;
+  $('modalTitle').textContent=v.title;$('modalDesc').textContent=v.description||'';
+  $('viewsLabel').textContent=v.views.toLocaleString('vi-VN')+' lượt xem';$('likeBtn').textContent='♡ Thích '+v.likes;
+  $('commentList').innerHTML=(v.comments||[]).map(c=>'<li>'+esc(c)+'</li>').join('');
+  $('deleteVideoBtn').classList.toggle('hidden',!(session&&session.user?.email?.toLowerCase()===OWNER_EMAIL.toLowerCase()));
+  makePlayer(v,$('playerArea'));$('relatedGrid').innerHTML=videos.filter(x=>x.id!==v.id&&x.category===v.category).slice(0,4).map(x=>`<article class="card" data-related="${esc(x.id)}"><div class="thumb">${cover(x)}</div><div class="card-body"><h3>${esc(x.title)}</h3></div></article>`).join('');
+  $('watchModal').classList.add('open');
+  if(db){const {data,error}=await db.rpc('increment_video_views',{video_id:Number(id)});if(!error){v.views=Number(data??v.views+1);$('viewsLabel').textContent=v.views.toLocaleString('vi-VN')+' lượt xem';render()}else console.warn('RPC increment_video_views:',error.message)}
+}
+$('closeModal').onclick=()=>$('watchModal').classList.remove('open');
+$('watchModal').addEventListener('click',e=>{if(e.target===$('watchModal'))$('watchModal').classList.remove('open')});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')$('watchModal').classList.remove('open')});
+$('likeBtn').onclick=async()=>{
+  if(!db||!currentId)return;const v=videos.find(x=>x.id===currentId);if(!v)return;
+  const {data,error}=await db.rpc('increment_video_likes',{video_id:Number(currentId)});
+  if(error){alert('Chưa tăng được lượt thích: '+error.message);return}
+  v.likes=Number(data??v.likes+1);$('likeBtn').textContent='♡ Thích '+v.likes;render();
+};
 $('uploadForm').addEventListener('submit',async e=>{
- e.preventDefault();if(!db){status('Chưa cấu hình Supabase Key.');return}if(!session){status('Hãy đăng nhập chủ web trước.');return}
- const title=$('videoTitle').value.trim(),category=$('videoCategory').value,description=$('videoDesc').value.trim(),vf=$('videoFile').files[0],cf=$('coverFile').files[0];if(!title||!vf){status('Cần nhập tên và chọn file video.');return}
- if(vf.size>1024*1024*1024){status('File video vượt quá 1 GB. Hãy nén video hoặc dùng TUS/resumable upload.');return}
- const btn=$('uploadSubmit');btn.disabled=true;status('Đang tải video lên kho trực tuyến…');let videoPath=null,thumbPath=null;
- try{
- const id=crypto.randomUUID?crypto.randomUUID():String(Date.now());const ext=safeFileName(vf.name).split('.').pop()||'mp4';videoPath=`videos/${id}.${ext}`;
- await uploadFile(vf,videoPath);
- if(cf){status('Video đã tải lên. Đang tải ảnh bìa…');const cext=safeFileName(cf.name).split('.').pop()||'jpg';thumbPath=`covers/${id}.${cext}`;await uploadFile(cf,thumbPath)}
- const videoUrl=publicUrl(videoPath),thumbUrl=thumbPath?publicUrl(thumbPath):'';
- status('Đang lưu thông tin video…');
- const {data,error}=await db.from(TABLE).insert({title,category,description,video_url:videoUrl,thumbnail_url:thumbUrl,video_path:videoPath,thumbnail_path:thumbPath,views:0,likes:0}).select().single();
- if(error)throw error;
- videos.unshift(normalize(data));render();$('uploadForm').reset();$('uploadPanel').classList.add('hidden');status('Đăng video thành công. Video đã được lưu online.');alert('Đã đăng video lên kho trực tuyến.');
- }catch(err){console.error(err);status('Đăng video thất bại: '+(err.message||String(err))+'\nNếu file đã lên kho nhưng lưu thông tin thất bại, hãy kiểm tra Storage và chính sách bảng videos.');}
- finally{btn.disabled=false}
+  e.preventDefault();
+  if(!db){status('Chưa kết nối Supabase.');return}
+  if(!session||session.user?.email?.toLowerCase()!==OWNER_EMAIL.toLowerCase()){status('Hãy đăng nhập đúng tài khoản chủ web trước.');return}
+  const title=$('videoTitle').value.trim(),category=$('videoCategory').value,description=$('videoDesc').value.trim();
+  const vf=$('videoFile').files[0],cf=$('coverFile').files[0];
+  const videoLink=$('videoUrlInput').value.trim(),coverLink=$('coverUrlInput').value.trim();
+  if(!title){status('Cần nhập tên video.');return}
+  if((!vf&&!videoLink)||(vf&&videoLink)){status('Chọn một trong hai: tải file video hoặc dán link video, không chọn cả hai.');return}
+  if(cf&&coverLink){status('Chọn ảnh bìa từ máy hoặc dán link ảnh bìa, không dùng cả hai.');return}
+  const checkedVideo=validHttps(videoLink,'Link video');if(checkedVideo&&checkedVideo.startsWith('Link video ')){status(checkedVideo);return}
+  const checkedCover=validHttps(coverLink,'Link ảnh bìa');if(checkedCover&&checkedCover.startsWith('Link ảnh bìa ')){status(checkedCover);return}
+  if(vf&&vf.size>FREE_MAX_FILE_BYTES){status('Tệp video này lớn hơn 50 MB. Supabase Free giới hạn 50 MB mỗi tệp. Chưa thể tải tệp này cho đến khi nâng giới hạn Storage; không phải lỗi giao diện.');return}
+  if(cf&&cf.size>5*1024*1024){status('Ảnh bìa lớn hơn 5 MB. Hãy chọn ảnh nhỏ hơn.');return}
+  const btn=$('uploadSubmit');btn.disabled=true;$('uploadProgress').classList.add('hidden');status('Đang chuẩn bị đăng video...');
+  let videoPath=null,thumbPath=null,rowInserted=false;
+  try{
+    const id=crypto.randomUUID?crypto.randomUUID():String(Date.now());
+    let videoUrl=checkedVideo||'',thumbUrl=checkedCover||'';
+    if(vf){
+      const ext=safeFileName(vf.name).split('.').pop()||'mp4';videoPath=`videos/${id}.${ext}`;
+      status('Đang tải video lên Supabase Storage...');progress(15);
+      await uploadFile(vf,videoPath);progress(75);videoUrl=publicUrl(videoPath);
+    }
+    if(cf){
+      const ext=safeFileName(cf.name).split('.').pop()||'jpg';thumbPath=`covers/${id}.${ext}`;
+      status('Đang tải ảnh bìa...');await uploadFile(cf,thumbPath);thumbUrl=publicUrl(thumbPath);
+    }
+    status('Đang lưu thông tin vào bảng videos...');
+    const {data,error}=await db.from(TABLE).insert({
+      title,category,description,video_url:videoUrl,thumbnail_url:thumbUrl||'',
+      video_path:videoPath,thumbnail_path:thumbPath,views:0,likes:0
+    }).select().single();
+    if(error)throw error;rowInserted=true;
+    videos.unshift(normalize(data));render();$('uploadForm').reset();$('uploadPanel').classList.add('hidden');
+    status('Đăng video thành công.');alert('Đã đăng video thành công.');
+  }catch(err){
+    console.error('upload error:',err);
+    status('Đăng video thất bại: '+(err?.message||String(err))+(videoPath&&!rowInserted?'\nNếu tệp đã tải lên Storage nhưng không lưu được thông tin, file có thể vẫn còn trong thư mục videos/. Chưa xóa tự động để tránh mất dữ liệu.':''));
+  }finally{btn.disabled=false;$('uploadProgress').classList.add('hidden')}
 });
-$('deleteVideoBtn').onclick=async()=>{if(!db||!session||!currentId)return;if(!confirm('Bạn chắc chắn muốn xóa video này khỏi trang web?'))return;const v=videos.find(x=>x.id===currentId);if(!v)return;try{const {error}=await db.from(TABLE).delete().eq('id',Number(currentId));if(error)throw error;const paths=[v.video_path,v.thumbnail_path].filter(Boolean);if(paths.length){const {error:se}=await db.storage.from(BUCKET).remove(paths);if(se)console.warn('Đã xóa thông tin nhưng không xóa được file:',se.message)}$('watchModal').classList.remove('open');await loadVideos();alert('Đã xóa video khỏi danh sách.')}catch(err){alert('Không xóa được: '+err.message)}};
-async function start(){if(!initDb()){status('CẦN CẤU HÌNH: thay DAN_PUBLISHABLE_KEY_CUA_BRO_VAO_DAY bằng Supabase Publishable key. Không dùng service_role.');$('showUpload').classList.remove('hidden');$('uploadPanel').classList.remove('hidden');render();return}
- await refreshSession();db.auth.onAuthStateChange((_event,s)=>{session=s;setOwnerUI()});await loadVideos();status('Đã kết nối Supabase.')}
-start();
+$('deleteVideoBtn').onclick=async()=>{
+  if(!db||!session||session.user?.email?.toLowerCase()!==OWNER_EMAIL.toLowerCase()||!currentId)return;
+  if(!confirm('Bạn chắc chắn muốn xóa video này khỏi website?'))return;
+  const v=videos.find(x=>x.id===currentId);if(!v)return;
+  try{
+    const {error}=await db.from(TABLE).delete().eq('id',Number(currentId));if(error)throw error;
+    const paths=[v.video_path,v.thumbnail_path].filter(Boolean);
+    if(paths.length){const {error:se}=await db.storage.from(BUCKET).remove(paths);if(se)alert('Đã xóa bản ghi nhưng chưa xóa được file Storage: '+se.message)}
+    $('watchModal').classList.remove('open');await loadVideos();alert('Đã xóa video khỏi danh sách.');
+  }catch(err){alert('Không xóa được: '+(err.message||String(err)))}
+};
+async function start(){
+  if(!initDb()){status('Không khởi tạo được Supabase. Kiểm tra URL và Publishable key.');return}
+  await refreshSession();
+  db.auth.onAuthStateChange((_event,s)=>{session=s;setOwnerUI()});
+  await loadVideos();
+  status('Đã kết nối Supabase. Nếu danh sách trống, hãy kiểm tra quyền SELECT (RLS) của bảng videos.');
+}
+start().catch(err=>{console.error('startup:',err);status('Lỗi khởi động: '+(err.message||String(err)))});
 })();
 </script>
-</body></html>
+</body>
+</html>
